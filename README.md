@@ -9,7 +9,7 @@
 
 ## 2022 FIFA World Cup Stats Api URL
 
-Visit the website [here](https://world-cup-2022-stats-api.herokuapp.com/)
+Visit the website [https://world-cup-2022-stats-api.herokuapp.com](https://world-cup-2022-stats-api.herokuapp.com/)
 
 ## Overview
 
@@ -120,25 +120,45 @@ The API will return these error types when requests fail:
 
 ### Endpoints 
 
-#### GET /categories
+#### GET /countries
 
 - General:
 
-  - Returns a dictionary of all available categories and success value.
+  - Returns a dictionary of all available countries and success value.
 
-- Sample: `curl http://127.0.0.1:5000/categories`
+- Sample: `curl http://127.0.0.1:5000/countries`
 
   ```json
   {
-    "categories": {
+    "countries": [
       "1": "Science", 
-      "2": "Art", 
-      "3": "Geography", 
-      "4": "History", 
-      "5": "Entertainment", 
-      "6": "Sports"
-    }, 
-    "success": true
+      {
+          "coach": "Lionel Scaloni",
+          "id": 1,
+          "name": "Argentina",
+          "rank": 3
+      },
+      {
+          "coach": "Tite",
+          "id": 2,
+          "name": "Brazil",
+          "rank": 1
+      },
+      {
+          "coach": "Didier Deschamps",
+          "id": 3,
+          "name": "France",
+          "rank": 4
+      },
+      {
+          "coach": "Roberto Martínez",
+          "id": 4,
+          "name": "Belgium",
+          "rank": 2
+      }
+    ], 
+    "success": true,
+    "total_countries": 4
   }
   ```
 
