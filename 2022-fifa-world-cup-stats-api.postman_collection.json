@@ -1,0 +1,1473 @@
+{
+	"info": {
+		"_postman_id": "4205a9f5-4da2-47e3-b069-8a5f9f2db71e",
+		"name": "2022-fifa-world-cup-stats-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4107564"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains countries array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.countries).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 since no credentials are present\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 since no credentials are present\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 since no credentials are present\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains players array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.players).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 since no credentials are present\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 since no credentials are present\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 since no credentials are present\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviewer",
+			"item": [
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains countries array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.countries).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains players array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.players).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1rUXdOalpETTBORU9EUTBNVGxCUlRCRU5qVXpOa1V4T1RRNU5FTXpOREV6TVRJd1F6ZzFRdyJ9.eyJpc3MiOiJodHRwczovL3BlbWJld2ViLmF1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2M2E0NDU0YzYyZWM3NDU2YTBkOTVkZTciLCJhdWQiOiJGaWZhV29ybGRDdXBTdGF0cyIsImlhdCI6MTY3MTczNjI4MiwiZXhwIjoxNjcxODIyNjgyLCJhenAiOiJHNUUzTFZCNVJLRUNzT2psMDZtajZtT3RLUjQ1NmlaNCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNvdW50cmllcyIsImdldDpjb3VudHJpZXMtZGV0YWlsIiwiZ2V0OnBsYXllcnMiLCJnZXQ6cGxheWVycy1kZXRhaWwiXX0.pfNixdLkq8kKCoI5bj3ZcrFfILdM9wKFfUYWLfWv_XL_axAx3rGeX85LToRQFaUwOgQMCFGNyd4H8jj1yoWebhuHKZbLy8jhp-KpEdCPlbD0Bp5RORiqfkpkI-2mJzHgaCbPR7zoecOjZFA-XWmO9L6q83MP6v5Vanm9yWr5XRi6FAqX973fBTCm9065hUHr2LbS7aq-7HnOu3cTFZaiYZRM83n3KjOXLpA_ES-qQhag2yjeSYsLXKQh83YsazxFmR58awhRzsyPQmJIAWcWpw2trm7qnvy_gABo1kfIwbHGZRzP0rjBukqYWqHOdg5dJv-4RKKqP7HRk2zZl7LzBw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "capturer",
+			"item": [
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains countries array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.countries).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"England\",\r\n    \"rank\": 1,\r\n    \"coach\": \"Gary Southgate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains players array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.players).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains player object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.player).to.have.all.keys('id', 'name', 'goals', 'assists', 'country_id')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains player object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.player).to.have.all.keys('id', 'name', 'goals', 'assists', 'country_id')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Richarlison\",\r\n    \"goals\": 3,\r\n    \"assists\": 0,\r\n    \"country_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains player object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.player).to.have.all.keys('id', 'name', 'goals', 'assists', 'country_id')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"goals\": 3,\r\n    \"assists\": 1,\r\n    \"country_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/9999",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/9999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1rUXdOalpETTBORU9EUTBNVGxCUlRCRU5qVXpOa1V4T1RRNU5FTXpOREV6TVRJd1F6ZzFRdyJ9.eyJpc3MiOiJodHRwczovL3BlbWJld2ViLmF1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2M2E0NDU5MGI4ZmZiZGIzYmZlMjFmYWEiLCJhdWQiOiJGaWZhV29ybGRDdXBTdGF0cyIsImlhdCI6MTY3MTczOTI2MiwiZXhwIjoxNjcxODI1NjYyLCJhenAiOiJHNUUzTFZCNVJLRUNzT2psMDZtajZtT3RLUjQ1NmlaNCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOnBsYXllcnMiLCJnZXQ6Y291bnRyaWVzIiwiZ2V0OmNvdW50cmllcy1kZXRhaWwiLCJnZXQ6cGxheWVycyIsImdldDpwbGF5ZXJzLWRldGFpbCIsInBhdGNoOnBsYXllcnMiLCJwb3N0OnBsYXllcnMiXX0.fbR8AqyCd5uID9EYfwSMA9Uw2ssqXb0C26vS7C0kx67N-CYy6QzeYdUhjTC8WAw1GTpPvV8V5axMuJEFQ5Gwl4x844HAi83TPnHSyh2zD90mpQfOw4p-QAUxySQVkJrTFdjwSOudFpmuwZReL0bTJgYpi4q_nHV1IOmLi2CEzr9VcbvmZvsp6a9aMc8WwNrwlntdCskQ9ty0lE0HAhYHicsNDYee1MOjMYXS2POUBDXJuAUxbC3SwtH4ojVdJ5ksUPCkuPrKXxlbfx_TVfRWz-ign95ITwiCU9s-p2dzqbpRaUkTqAtUWfnFRqljxNqJoLMM25NCiZb4GSHDOfvecw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "supervisor",
+			"item": [
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains countries array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.countries).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains country object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.country).to.have.all.keys('id', 'name', 'rank', 'coach')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"England\",\n    \"rank\": 1,\n    \"coach\": \"Gary Southgate\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains countries array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.country).to.have.all.keys('id', 'name', 'rank', 'coach')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rank\": 100,\n    \"coach\": \"Thomas Tuchel\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/countries/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/countries/9999",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/countries/9999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"countries",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains players array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.players).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains player object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.player).to.have.all.keys('id', 'name', 'goals', 'assists', 'country_id')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Richarlison\",\n    \"goals\": 3,\n    \"assists\": 0,\n    \"country_id\": 2\n}"
+						},
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains player object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.player).to.have.all.keys('id', 'name', 'goals', 'assists', 'country_id')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goals\": 3,\n    \"assists\": 1,\n    \"country_id\": 2\n}"
+						},
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/players/9999",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/players/9999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1rUXdOalpETTBORU9EUTBNVGxCUlRCRU5qVXpOa1V4T1RRNU5FTXpOREV6TVRJd1F6ZzFRdyJ9.eyJpc3MiOiJodHRwczovL3BlbWJld2ViLmF1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2M2E0NDVhNWY0YjI2YjIyMzRmYzY3MTYiLCJhdWQiOiJGaWZhV29ybGRDdXBTdGF0cyIsImlhdCI6MTY3MTczNjQyMywiZXhwIjoxNjcxODIyODIzLCJhenAiOiJHNUUzTFZCNVJLRUNzT2psMDZtajZtT3RLUjQ1NmlaNCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNvdW50cmllcyIsImRlbGV0ZTpwbGF5ZXJzIiwiZ2V0OmNvdW50cmllcyIsImdldDpjb3VudHJpZXMtZGV0YWlsIiwiZ2V0OnBsYXllcnMiLCJnZXQ6cGxheWVycy1kZXRhaWwiLCJwYXRjaDpjb3VudHJpZXMiLCJwYXRjaDpwbGF5ZXJzIiwicG9zdDpjb3VudHJpZXMiLCJwb3N0OnBsYXllcnMiXX0.Hwte-BOr89OP4mHEGMjIlGwHU1HSK4jo04SuvTQ6u7q9wDic2pR_MyMYvcxccqtQF72_VEYzBLGNmiDiMkwOxSxtQXVFOb4zfVm7mSM6HqoYoifHLlovNW8pqqfaLsNE1tuQq7Hg0xVZDlkFEeA30_teOsDVAUn3WXX4WBXtUIdezG-cSxJRrtqk-cB2Ynu3SfKXDg71MM8yt2U5UPJU66gtdaN-5dIlAiFBPIhTvEa0VvTHBE7d3cvpjswr1QEU3A37nRi0j0ltDRWNgR2oRCiHJ0l5Aw_6P4igvbrXGGNv8WkdpwMwYRH_Db9Xwe0Af_tOv7O3zZmAbKQuCoU9QA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:5000",
+			"type": "string"
+		}
+	]
+}
