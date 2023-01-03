@@ -103,8 +103,7 @@ python test_app.py
 
 ### Getting Started
 
-- Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, `http://127.0.0.1:5000/`, which is set as a proxy in the frontend configuration.
-- Authentication: This version of the application does not require authentication or API keys.
+- Base URL: This app is hosted at the following base URL, `https://world-cup-2022-stats-api.herokuapp.com/`
 
 ### Error Handling
 
@@ -132,7 +131,7 @@ The API will return these error types when requests fail:
 
   - Returns a dictionary of all available countries and success value.
 
-- Sample: `curl http://127.0.0.1:5000/countries`
+- Sample: `curl https://world-cup-2022-stats-api.herokuapp.com/countries`
 
   ```json
   {
@@ -173,7 +172,7 @@ The API will return these error types when requests fail:
 
   - Returns a single country of the given ID if it exists and success value.
 
-- Sample: `curl http://127.0.0.1:5000/countries/1`
+- Sample: `curl https://world-cup-2022-stats-api.herokuapp.com/countries/1`
 
   ```json
   {
@@ -193,7 +192,7 @@ The API will return these error types when requests fail:
 
   - Creates a new country. Returns the the created country and success value.
 
-- `curl http://127.0.0.1:5000/countries -X POST -H "Content-Type: application/json" -d '{"name":"England","rank":8,"coach":"Gary Southgate"}'`
+- `curl https://world-cup-2022-stats-api.herokuapp.com/countries -X POST -H "Content-Type: application/json" -d '{"name":"England","rank":8,"coach":"Gary Southgate"}'`
 
   ```json
   {
@@ -213,7 +212,7 @@ The API will return these error types when requests fail:
 
   - Updates a country of the given ID if it exists. Returns the the updated country and success value.
 
-- `curl http://127.0.0.1:5000/countries/3 -X POST -H "Content-Type: application/json" -d '{"rank":15,"coach":"Thomas Tuchel"}'`
+- `curl https://world-cup-2022-stats-api.herokuapp.com/countries/3 -X POST -H "Content-Type: application/json" -d '{"rank":15,"coach":"Thomas Tuchel"}'`
 
   ```json
   {
@@ -231,7 +230,7 @@ The API will return these error types when requests fail:
 
 - General:
   - Deletes the country of the given ID if it exists. Returns the ID of the deleted country and success value.
-- `curl -X DELETE http://127.0.0.1:5000/questions/4`
+- `curl -X DELETE https://world-cup-2022-stats-api.herokuapp.com/questions/4`
 
 ```json
 {
@@ -246,7 +245,7 @@ The API will return these error types when requests fail:
 
   - Returns a dictionary of all available players and success value.
 
-- Sample: `curl http://127.0.0.1:5000/players`
+- Sample: `curl https://world-cup-2022-stats-api.herokuapp.com/players`
 
   ```json
   {
@@ -291,7 +290,7 @@ The API will return these error types when requests fail:
 
   - Returns a single player of the given ID if it exists and success value.
 
-- Sample: `curl http://127.0.0.1:5000/players/1`
+- Sample: `curl https://world-cup-2022-stats-api.herokuapp.com/players/1`
 
   ```json
   {
@@ -312,7 +311,7 @@ The API will return these error types when requests fail:
 
   - Creates a new player. Returns the the created player and success value.
 
-- `curl http://127.0.0.1:5000/players -X POST -H "Content-Type: application/json" -d '{"name":"Richarlison","goals":3,"assists":0,"country_id":2}'`
+- `curl https://world-cup-2022-stats-api.herokuapp.com/players -X POST -H "Content-Type: application/json" -d '{"name":"Richarlison","goals":3,"assists":0,"country_id":2}'`
 
   ```json
   {
@@ -332,7 +331,7 @@ The API will return these error types when requests fail:
 
   - Updates a player of the given ID if it exists. Returns the the updated player and success value.
 
-- `curl http://127.0.0.1:5000/players/3 -X POST -H "Content-Type: application/json" -d '{"goals":10,"assists":5,"country_id":5}'`
+- `curl https://world-cup-2022-stats-api.herokuapp.com/players/3 -X POST -H "Content-Type: application/json" -d '{"goals":10,"assists":5,"country_id":5}'`
 
   ```json
   {
@@ -350,7 +349,7 @@ The API will return these error types when requests fail:
 
 - General:
   - Deletes the player of the given ID if it exists. Returns the ID of the deleted player and success value.
-- `curl -X DELETE http://127.0.0.1:5000/players/4`
+- `curl -X DELETE https://world-cup-2022-stats-api.herokuapp.com/players/4`
 
 ```json
 {
