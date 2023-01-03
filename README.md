@@ -119,6 +119,7 @@ Errors are returned as JSON objects in the following format:
 
 The API will return these error types when requests fail:
 
+- 404: Bad Request
 - 404: Resource Not Found
 - 405: Method Not Allowed
 - 422: Not Processable
